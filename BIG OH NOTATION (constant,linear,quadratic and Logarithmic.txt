@@ -1,0 +1,97 @@
+Time Complexity Using Big O Notation
+
+In computer science, Big O notation is used to describe the performance (time complexity) of an algorithm in terms of the size of the input. It tells us how the runtime of an algorithm increases as the size of the input increases. Here, we'll look at the time complexity for common types of algorithms: constant time, linear time, quadratic time, and logarithmic time.
+
+1. Constant Time: O(1)
+Explanation: An algorithm is said to have constant time complexity if the time it takes to complete does not depend on the size of the input. Whether the input is 1 element or 1 million elements, the algorithm will take the same amount of time.
+
+Example:
+
+python
+Copy
+Edit
+def constant_example(arr):
+    return arr[0]  # Always returns the first element
+Explanation:
+
+In this case, no matter how large the input array arr is, the function always returns the first element. It performs just one operation, regardless of the size of the array.
+Time Complexity:
+
+O(1): The time taken to execute this algorithm is constant and does not change with the size of the input.
+Example in Real Life:
+
+Imagine flipping a light switch. It doesn't matter how many rooms are in the house, the time it takes to flip the switch is always the same: constant.
+2. Linear Time: O(n)
+Explanation: An algorithm has linear time complexity if its runtime grows linearly with the size of the input. In simpler terms, as the input size doubles, the runtime also doubles. The algorithm processes each input element individually, and the number of operations is directly proportional to the input size.
+
+Example:
+
+python
+Copy
+Edit
+def linear_example(arr):
+    for item in arr:
+        print(item)  # Print each element in the array
+Explanation:
+
+The function loops through each item in the array once, printing each item.
+As the size of arr increases, the number of iterations (or prints) increases in a one-to-one relationship.
+Time Complexity:
+
+O(n): The time taken grows directly in proportion to the size of the input. If n is the size of the array, the function runs n times.
+Example in Real Life:
+
+Think of a scenario where you are reading each line of a book. If the book has 100 pages, you'll read 100 lines. If it has 200 pages, you'll read 200 lines. The time it takes grows linearly with the number of pages.
+3. Quadratic Time: O(n²)
+Explanation: An algorithm has quadratic time complexity if its runtime grows quadratically with the size of the input. This usually happens when there are nested loops (loops within loops) in the algorithm. For every element in the outer loop, the inner loop executes its entire sequence.
+
+Example:
+
+python
+Copy
+Edit
+def quadratic_example(arr):
+    for i in arr:
+        for j in arr:
+            print(i, j)  # Print every pair of elements in the array
+Explanation:
+
+Here, there are two nested loops. The outer loop iterates over each element in arr, and for each iteration of the outer loop, the inner loop iterates over the entire array.
+If the array has 5 elements, the outer loop runs 5 times, and for each of those iterations, the inner loop also runs 5 times, leading to 25 operations in total (5 * 5).
+For an array of size n, the total number of operations is n * n, hence the time complexity is O(n²).
+Time Complexity:
+
+O(n²): The time grows quadratically with the input size. For an array of size n, there will be n² operations.
+Example in Real Life:
+
+Imagine trying to find every pair of people in a group to shake hands. If there are 4 people, you have 4 * 4 = 16 possible handshakes (since each person shakes hands with everyone else). As the group grows, the number of handshakes increases dramatically.
+4. Logarithmic Time: O(log n)
+Explanation: An algorithm has logarithmic time complexity if its runtime grows logarithmically with the size of the input. Logarithmic time complexity typically occurs in algorithms that divide the input in half (or any other constant fraction) at each step. Binary Search is the classic example.
+
+Example:
+
+python
+Copy
+Edit
+def binary_search(arr, target):
+    low, high = 0, len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+Explanation:
+
+The binary_search algorithm starts with the entire array. It compares the target value with the middle element. If the target is smaller, it discards the right half; if the target is larger, it discards the left half. Each comparison reduces the search space by half.
+In each step, the size of the input reduces drastically. Instead of going through every element, the algorithm narrows down the search area logarithmically.
+Time Complexity:
+
+O(log n): The number of operations grows logarithmically with the input size. With each step, the problem size is reduced by half. So, for n elements, the number of steps will be proportional to log n (base 2).
+Example in Real Life:
+
+Think of looking for a name in a phonebook. Instead of checking every name one by one, you open the book in the middle, decide if the name is on the left or right half, and repeat this process. With each step, you cut the search space in half, making it much faster than checking each name individually.
+
