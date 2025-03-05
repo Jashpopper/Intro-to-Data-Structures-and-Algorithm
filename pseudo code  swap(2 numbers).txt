@@ -1,0 +1,20 @@
+BEGIN
+    // Declare two variables
+    DECLARE num1, num2
+
+    // Input values for num1 and num2
+    PRINT "Enter first number: "
+    INPUT num1
+    PRINT "Enter second number: "
+    INPUT num2
+
+    // Swap the values
+    TEMP = num1
+    num1 = num2
+    num2 = TEMP
+
+    // Output the swapped values
+    PRINT "After swapping:"
+    PRINT "First number: ", num1
+    PRINT "Second number: ", num2
+END
