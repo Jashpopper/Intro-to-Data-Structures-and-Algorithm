@@ -14,7 +14,7 @@ This repository contains two C programs:
 ### 1. Student Marks Calculator
 This program calculates the average marks of a student.
 
-![Student Marks Output](0001.png)
+![Student Marks Output](0003.png)
 
 ### 2. Animal Counter
 This program accepts `N` domestic and `X` wild animals and prints the total.
