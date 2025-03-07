@@ -21,3 +21,8 @@ This program accepts `N` domestic and `X` wild animals and prints the total.
 
 ![Animal Counter Output](0002.png)
 
+### 3. C code showing how to tranverse an array 
+
+![code in c ](444.png)
+
+
